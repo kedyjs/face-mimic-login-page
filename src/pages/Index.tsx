@@ -1,10 +1,36 @@
 
 import React from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import FacebookLogo from '@/components/FacebookLogo';
+import FacebookMobileLogo from '@/components/FacebookMobileLogo';
 import FacebookLoginForm from '@/components/FacebookLoginForm';
+import FacebookMobileLoginForm from '@/components/FacebookMobileLoginForm';
 import FacebookFooter from '@/components/FacebookFooter';
+import FacebookMobileFooter from '@/components/FacebookMobileFooter';
 
 const Index = () => {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <div className="min-h-screen bg-[#f0f2f5] flex flex-col">
+        <div className="flex flex-grow flex-col items-center justify-center pt-10 px-4 pb-8 space-y-8">
+          {/* Logo */}
+          <div className="mt-10 mb-8">
+            <FacebookMobileLogo />
+          </div>
+          
+          {/* Login form */}
+          <div className="w-full max-w-md">
+            <FacebookMobileLoginForm />
+          </div>
+        </div>
+        
+        <FacebookMobileFooter />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#f0f2f5] flex flex-col">
       <div className="flex flex-grow items-center justify-center px-4 py-8 md:py-20">
