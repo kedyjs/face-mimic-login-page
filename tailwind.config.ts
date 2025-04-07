@@ -68,7 +68,9 @@ export default {
 					green: '#42B72A',
 					grey: '#F0F2F5',
 					text: '#1C1E21',
-					link: '#1877F2'
+					link: '#1877F2',
+					footer: '#737373',
+					footerBg: '#FFFFFF'
 				}
 			},
 			borderRadius: {
@@ -97,7 +99,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			boxShadow: {
+				'facebook': '0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1)'
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

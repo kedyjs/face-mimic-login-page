@@ -17,11 +17,11 @@ const FacebookLoginForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-md p-4 bg-white rounded-lg shadow-lg">
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="w-full bg-white rounded-lg shadow-md p-4 md:p-4">
+      <form onSubmit={handleSubmit} className="space-y-3">
         <Input
           type="text"
-          placeholder="Email address or phone number"
+          placeholder="E-posta veya Telefon Numarası"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-full h-12 text-lg border border-gray-200 rounded-md"
@@ -31,7 +31,7 @@ const FacebookLoginForm: React.FC = () => {
         <div className="relative">
           <Input
             type={showPassword ? "text" : "password"}
-            placeholder="Password"
+            placeholder="Şifre"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full h-12 text-lg border border-gray-200 rounded-md pr-10"
@@ -49,14 +49,14 @@ const FacebookLoginForm: React.FC = () => {
         
         <Button 
           type="submit" 
-          className="w-full h-12 text-lg font-bold bg-facebook-blue hover:bg-blue-600"
+          className="w-full h-12 text-lg font-semibold bg-facebook-blue hover:bg-blue-600"
         >
-          Log In
+          Giriş Yap
         </Button>
         
         <div className="text-center">
           <a href="#" className="text-facebook-link text-sm hover:underline">
-            Forgotten password?
+            Şifreni mi Unuttun?
           </a>
         </div>
         
@@ -65,9 +65,9 @@ const FacebookLoginForm: React.FC = () => {
         <div className="flex justify-center">
           <Button 
             type="button" 
-            className="px-4 py-3 text-white bg-facebook-green hover:bg-green-600 font-bold text-md"
+            className="px-4 py-3 text-white bg-[#42b72a] hover:bg-[#36a420] font-bold text-md"
           >
-            Create New Account
+            Yeni hesap oluştur
           </Button>
         </div>
       </form>
